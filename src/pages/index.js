@@ -344,7 +344,13 @@ export default (() => {
 			xs-padding="40px 0 20px 0"
 		>
 			<Override slot="SectionContent" flex-direction="row" justify-content="space-between" />
-			<Link href="#" display="flex" align-items="center" text-decoration-line="initial">
+			<Link
+				href="https://github.com/TheEconomist/big-mac-data"
+				display="flex"
+				align-items="center"
+				text-decoration-line="initial"
+				target="_blank"
+			>
 				<Text font="--base" color="--greyD2" margin="16px 10px 16px 0px">
 					Data from
 				</Text>
@@ -353,12 +359,18 @@ export default (() => {
 					The Economist
 				</Text>
 			</Link>
-			<Link href="#" display="flex" text-decoration-line="initial" font="--base">
+			<Link
+				href="https://en.wikipedia.org/wiki/Big_Mac_Index"
+				display="flex"
+				text-decoration-line="initial"
+				font="--base"
+				target="_blank"
+			>
 				<Text color="--greyD2" display="flex" align-items="center">
 					About Big Mac Index
 				</Text>
 			</Link>
-			<Link href="#" display="flex" text-decoration-line="initial">
+			<Link href="https://quarkly.io/" display="flex" text-decoration-line="initial" target="_blank">
 				<Text font="--base" color="--greyD2" margin="16px 8px 16px 0px">
 					Made on{" "}
 				</Text>
