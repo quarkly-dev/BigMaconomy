@@ -28,6 +28,9 @@ export default {
 				"description": "BigMaconomics is an app that shows the Big Mac Index and the number of BigMacs you can buy in any country",
 				"og:description": "BigMaconomics is an app that shows the Big Mac Index and the number of BigMacs you can buy in any country",
 				"og:image": "https://uploads.quarkly.io/5f841d553d84d4001ec38fac/images/og_%20image.png?v=2021-01-12T13:47:01.230Z"
+			},
+			"styles": {
+				"background": "--color-lightD2"
 			}
 		}
 	},
