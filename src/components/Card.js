@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import atomize from "@quarkly/atomize";
 import { useOverrides } from '@quarkly/components';
 import { Box, Text } from '@quarkly/widgets';
@@ -74,10 +74,19 @@ const Card = ({
 		override,
 		rest
 	} = useOverrides(props, overrides);
-	const platform = window.navigator.platform,
-	      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-	      isWindows = windowsPlatforms.indexOf(platform) !== -1,
-	      number = income / country.dollarPrice;
+	const [isWindows, setIsWindows] = useState(true);
+	const number = income / country.dollarPrice;
+	useLayoutEffect(() => {
+		const platform = window.navigator.platform;
+		const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+		const isWin = windowsPlatforms.indexOf(platform) !== -1;
+
+		if (isWin === isWindows) {
+			return;
+		}
+
+		setIsWindows(isWin);
+	}, []);
 	let burgers;
 
 	if (number < maxBurgers) {
