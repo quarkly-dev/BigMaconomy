@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import atomize from '@quarkly/atomize';
 import { useOverrides } from '@quarkly/components';
 import { Box } from '@quarkly/widgets';
@@ -27,9 +27,18 @@ const MyFilter = ({
 		override,
 		rest
 	} = useOverrides(props, overrides);
-	const platform = window.navigator.platform,
-	      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-	      isWindows = windowsPlatforms.indexOf(platform) !== -1;
+	const [isWindows, setIsWindows] = useState(true);
+	useLayoutEffect(() => {
+		const platform = window.navigator.platform;
+		const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+		const isWin = windowsPlatforms.indexOf(platform) !== -1;
+
+		if (isWin === isWindows) {
+			return;
+		}
+
+		setIsWindows(isWin);
+	}, []);
 	return <Box align-items="center" display="flex" {...rest} {...override('Filter')}>
 		      
 		<Label for="filter" {...override('Filter Label')}>

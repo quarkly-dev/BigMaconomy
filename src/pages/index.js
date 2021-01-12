@@ -331,7 +331,7 @@ export default (() => {
 							border-radius="50%"
 							opacity="1"
 						/>
-						<Override slot="Card Country" margin="0px 0px 6px 0px" />
+						<Override slot="Card Country" margin="0px 0px 2px 0px" />
 					</Override>
 				</Components.App>
 			</Box>
