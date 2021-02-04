@@ -21,8 +21,8 @@ const overrides = {
 };
 const defaults = {
 	minYear: 1986,
-	maxYear: 2020,
-	curYear: 2020,
+	maxYear: 2021,
+	curYear: 2021,
 	income: 100,
 	filter: 'ALL',
 	sort: 'name',
