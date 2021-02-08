@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Span, Text, Image, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Override, Section } from "@quarkly/components";
+import { RawHtml, Override, Section } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -401,5 +401,10 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script type={"text/javascript"} crossorigin={""} place={"endOfHead"} rawKey={"6020ed016b4053e1ecc98e5d"}>
+				{" (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};\n   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})\n   (window, document, \"script\", \"https://mc.yandex.ru/metrika/tag.js\", \"ym\");\n\n   ym(72077647, \"init\", {\n        clickmap:true,\n        trackLinks:true,\n        accurateTrackBounce:true\n   });"}
+			</script>
+		</RawHtml>
 	</Theme>;
 });
