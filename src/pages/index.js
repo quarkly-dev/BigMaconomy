@@ -95,6 +95,8 @@ export default (() => {
 					position="absolute"
 					left="auto"
 					md-right="-15px"
+					srcSet="https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/5f730004864724001fc89f3f/images/burger-illustration.png?v=2020-10-09T08%3A32%3A38.484Z&quality=85&w=3200 3200w"
+					sizes="(max-width: 576px) 100vw,(max-width: 768px) 100vw,(max-width: 992px) 100vw,(max-width: 380px) 100vw,100vw"
 				/>
 			</Box>
 			<Box quarkly-title="Content">
