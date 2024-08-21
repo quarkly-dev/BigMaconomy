@@ -21,8 +21,8 @@ const overrides = {
 };
 const defaults = {
 	minYear: 1986,
-	maxYear: 2021,
-	curYear: 2021,
+	maxYear: 2024,
+	curYear: 2024,
 	income: 100,
 	filter: 'ALL',
 	sort: 'name',
@@ -65,7 +65,8 @@ const App = props => {
 		rest
 	} = useOverrides(props, overrides);
 	const allCountries = parseData(getData());
-	const [countries, setCountries] = useState(allCountries ? allCountries.filter(c => c.year === defaults.curYear) : []);
+	const [countries, setCountries] = useState(allCountries // ? allCountries.filter(c => c.year === defaults.curYear) : []
+	);
 	const [income, setIncome] = useState(defaults.income);
 	const [year, setYear] = useState(defaults.curYear);
 	const [filter, setFilter] = useState(defaults.filter);
@@ -130,7 +131,7 @@ const App = props => {
 			<Filter defaultValue={filter} updateValue={handleChangeFilter} options={defaults.filterOptions} {...override('Filter')} />
 		</Box>
 		<Box {...override('Content')}>
-			{countries.length ? countries.map((country, index) => <Card {...override('Card', `Card-${index}`)} income={income} country={country} index={index} />) : <Empty name={allCountries.find(c => c.iso3 === filter).name} year={year} {...override('Empty')} />}
+			{countries.length ? countries.map((country, index) => <Card {...override('Card', `Card-${index}`)} income={income} country={country} index={index} />) : <Empty name={"Empty"} year={year} {...override('Empty')} />}
 		</Box>
 		    
 	</Box>;

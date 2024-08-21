@@ -101,11 +101,11 @@ const Card = ({
 			        
 			<Box {...override('Card Country')}>
 				          
-				<Span {...override('Card Country Flag', isWindows && `Card Country Flag :windows`)}>
-					            
+				{country.flag && <Span {...override('Card Country Flag', isWindows && `Card Country Flag :windows`)}>
+					                
 					{country.flag}
-					          
-				</Span>
+					              
+				</Span>}
 				          
 				<Span title={country.name} {...override('Card Country Name')}>
 					            

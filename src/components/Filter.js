@@ -55,7 +55,7 @@ const MyFilter = ({
 			        
 			{options.map(c => <Option value={c.iso3} selected={c.iso3 === defaultValue}>
 				            
-				{isWindows ? c.name : `${c.flag} ${c.name}`}
+				{isWindows ? c.name : `${c.flag ?? ''} ${c.name}`.trim()}
 				          
 			</Option>)}
 			      
